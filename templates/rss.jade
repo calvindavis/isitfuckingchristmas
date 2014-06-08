@@ -4,15 +4,15 @@ rss(version="2.0")
 		title Is it fucking Christmas?
 		link http://isitfuckingchristmas.co.uk/
 		description Is it fucking Christmas?
-		language en-gb
-		pubDate Sun, 08 Jun 2014 00:00:00 +0000
-		lastBuildDate Sun, 08 Jun 2014 00:00:00 +0000
-		
+		language en-gb		
+		- var first = items[0]
+		pubDate #{first.pubDate}
+		lastBuildDate #{first.pubDate}		
 		- for (var i in items)
 			- var item = items[i];
 			item
-				title #{item.title}
-				description #{item.title}
-				pubDate Sun, 08 Jun 2014 00:00:00 +0000
-				link http://isitfuckingchristmas.co.uk/2014/06/08
-				guid http://isitfuckingchristmas.co.uk/2014/06/08
+				title #{item.description}
+				description #{item.description}
+				pubDate #{item.pubDate}
+				link #{item.link}
+				guid #{item.link}
