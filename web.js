@@ -21,7 +21,7 @@ var indexHandler = function (req, res, next) {
 };
 
 app.get("/", indexHandler);
-app.get(/(\d{4}\-\d{2}\-\d{2})/, indexHandler);
+app.get(/(\d{4}\/\d{2}\/\d{2})/, indexHandler);
 
 var rssHandler = function (req, res, next) {
 	var items = iifc.isItFuckingChristmasRss();
