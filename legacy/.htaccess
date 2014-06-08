@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.isitfuckingchristmas\.co\.uk$
+RewriteRule ^(.*)$ "http\:\/\/isitfuckingchristmas\.co\.uk\/$1" [R=301,L]
+RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]
